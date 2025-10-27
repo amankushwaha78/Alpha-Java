@@ -1,0 +1,127 @@
+/**
+ * 🧩 ABSTRACT CLASS vs INTERFACE — WITH MINI EXAMPLES
+ * ---------------------------------------------------
+ *
+ * | Feature / Concept | ABSTRACT CLASS | INTERFACE |
+ * |-------------------|----------------|------------|
+ *
+ * 1️⃣ **Purpose**
+ * - Used to share common logic among related classes.
+ *   🧠 Example:
+ *       abstract class Animal { void eat() { } }
+ * - Defines a contract/behavior that can be applied to any class.
+ *   🧠 Example:
+ *       interface Flyable { void fly(); }
+ *
+ * ------------------------------------------------------------
+ * 2️⃣ **Keyword Used**
+ *   abstract class Animal { }
+ *   interface Flyable { }
+ *
+ * ------------------------------------------------------------
+ * 3️⃣ **Methods**
+ * - Abstract + Concrete allowed:
+ *       abstract class Shape {
+ *           abstract void draw();
+ *           void color() { System.out.println("Color added"); }
+ *       }
+ * - Interface methods abstract by default:
+ *       interface Drawable { void draw(); }
+ * - Since Java 8 → can also have:
+ *       default void fill() { }
+ *       static void info() { }
+ *
+ * ------------------------------------------------------------
+ * 4️⃣ **Variables / Fields**
+ * - Abstract class → can have normal variables:
+ *       abstract class Bird { int wings = 2; }
+ * - Interface → variables are public static final:
+ *       interface Planet { double GRAVITY = 9.8; }
+ *
+ * ------------------------------------------------------------
+ * 5️⃣ **Constructors**
+ * - Abstract class → ✅ can have constructors:
+ *       abstract class Car { Car() { System.out.println("Car base"); } }
+ * - Interface → ❌ cannot have constructors:
+ *       interface Machine { } // no constructor allowed
+ *
+ * ------------------------------------------------------------
+ * 6️⃣ **Access Modifiers**
+ * - Abstract class → can use public, private, protected:
+ *       protected void sound() { }
+ * - Interface → all methods implicitly public:
+ *       void start(); // same as public abstract void start();
+ *
+ * ------------------------------------------------------------
+ * 7️⃣ **Multiple Inheritance**
+ * - Abstract class → ❌ Only one can be extended:
+ *       class Dog extends Animal { }
+ * - Interface → ✅ multiple interfaces can be implemented:
+ *       class Robot implements Flyable, Runnable { }
+ *
+ * ------------------------------------------------------------
+ * 8️⃣ **Relationship Type**
+ * - Abstract class → "IS-A" relationship.
+ *       Dog IS-A Animal
+ * - Interface → "CAN-DO" relationship.
+ *       Bird CAN-DO Flyable
+ *
+ * ------------------------------------------------------------
+ * 9️⃣ **State / Data**
+ * - Abstract class can have state (fields with values):
+ *       abstract class Employee { String name; }
+ * - Interface cannot have state (only constants):
+ *       interface Config { int VERSION = 1; }
+ *
+ * ------------------------------------------------------------
+ * 🔟 **When to Use**
+ * - Abstract class → when classes are closely related.
+ *       abstract class Vehicle { void move() { } }
+ * - Interface → when behavior applies to many unrelated classes.
+ *       interface Payable { void pay(); }
+ *
+ * ------------------------------------------------------------
+ * 1️⃣1️⃣ **Default / Static Methods**
+ * - Abstract class → normal methods allowed.
+ *       void brake() { System.out.println("Braking..."); }
+ * - Interface → since Java 8:
+ *       default void stop() { }
+ *       static void info() { }
+ *
+ * ------------------------------------------------------------
+ * 1️⃣2️⃣ **Extends / Implements**
+ * - Abstract class → extended by a class:
+ *       class Dog extends Animal { }
+ * - Interface → implemented by a class:
+ *       class Plane implements Flyable { }
+ *
+ * ------------------------------------------------------------
+ * 1️⃣3️⃣ **Multiple Implementation**
+ * - Class can extend only one abstract class:
+ *       class Car extends Vehicle { }
+ * - Class can implement many interfaces:
+ *       class Drone implements Flyable, Recordable { }
+ *
+ * ------------------------------------------------------------
+ * 1️⃣4️⃣ **Main Method**
+ * - Abstract class → can have main method ✅
+ *       abstract class Demo { public static void main(...) { } }
+ * - Interface → since Java 8, can have static main ✅ (rarely used)
+ *       interface Demo { static void main(...) { } }
+ *
+ * ------------------------------------------------------------
+ * 1️⃣5️⃣ **Example Use Case**
+ * - Abstract class → base class with common logic:
+ *       abstract class Shape { abstract double area(); }
+ * - Interface → behavior capability:
+ *       interface Drawable { void draw(); }
+ *
+ * ------------------------------------------------------------
+ * 🧠 QUICK MEMORY TRICK:
+ * "Use ABSTRACT CLASS for FAMILY (shared logic),
+ *  INTERFACE for ABILITIES (shared behavior)."
+ *
+ * 🐶 Example:
+ *   class Dog extends Animal implements Flyable, Runnable { }
+ *
+ */
