@@ -25,7 +25,7 @@ Order of widening (smallest → largest):
 byte → short → int → long → float → double
 */
 
-public class TypeCastingDemo {
+public class _1_TypeCastingDemo {
     public static void main(String[] args) {
 
         // 🔹 Implicit / Widening Casting Example
