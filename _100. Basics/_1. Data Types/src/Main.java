@@ -29,31 +29,3 @@ public class Main {
         System.out.println("boolean: " + flag);   // Output ➜ boolean: true
     }
 }
-
-/*
-🧠 OUTPUT ON CONSOLE:
---------------------
-byte: 10
-short: 2000
-int: 50000
-long: 10000000000
-float: 12.5
-double: 99.99
-char: A
-boolean: true
-*/
-
-/*
-💡 QUICK SUMMARY
-================
-Primitive Data Types (8 total)
-------------------------------
-1. byte    → 1 byte  → range: -128 to 127
-2. short   → 2 bytes → range: -32,768 to 32,767
-3. int     → 4 bytes → most used for integers
-4. long    → 8 bytes → add 'L' at end
-5. float   → 4 bytes → add 'f' at end
-6. double  → 8 bytes → most used for decimals
-7. char    → 2 bytes → single character in single quotes
-8. boolean → 1 bit   → true or false
-*/
