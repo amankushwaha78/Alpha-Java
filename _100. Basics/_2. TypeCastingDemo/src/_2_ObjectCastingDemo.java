@@ -1,35 +1,40 @@
-public class ObjectCastingDemo {
+public class _2_ObjectCastingDemo {
 
     public static void main(String[] args) {
 
         // ✅ Upcasting Example (Automatic)
-        Dog d = new Dog();       // Child class object
-        Animal a = d;            // Upcasting (automatic: Dog → Animal)
-        a.sound();               // Works fine (method in Animal class)
-        // a.bark();             // ❌ Not allowed (Animal reference can't access Dog methods)
+        Dog d = new Dog();        // Child class object
+        Animal a = d;             // Upcasting (automatic: Dog -> Animal)
+        a.sound();                // Works fine (method in Animal class)
+        // a.bark();              // ❌ Not allowed (Animal reference can't access Dog methods)
 
         // ✅ Downcasting Example (Manual)
-        Animal a2 = new Dog();   // Upcasting first (safe)
-        Dog d2 = (Dog) a2;       // Downcasting (manual)
-        d2.bark();               // Works fine (now reference is Dog)
+        Animal a2 = new Dog();    // Upcasting first (safe)
+        Dog d2 = (Dog) a2;        // Downcasting (manual)
+        d2.bark();                // Works fine (now reference is Dog)
+        d2.sound();               // Works (inherited method from Animal)
 
-        // ⚠️ Invalid Downcasting Example
-        Animal a3 = new Animal(); // Pure Animal object
+        // ⚠️ Invalid Downcasting Example (commented to prevent runtime error)
+        /*
+        Animal a3 = new Animal();  // Pure Animal object
         try {
-            Dog d3 = (Dog) a3;   // ❌ Causes ClassCastException at runtime
+            Dog d3 = (Dog) a3;     // ❌ Causes ClassCastException at runtime
             d3.bark();
         } catch (ClassCastException e) {
             System.out.println("Caught Exception: " + e);
         }
+        */
     }
 }
 
+// 🔹 Parent Class
 class Animal {
     void sound() {
         System.out.println("Animal sound"); // Common method
     }
 }
 
+// 🔹 Child Class
 class Dog extends Animal {
     void bark() {
         System.out.println("Dog barks"); // Specific to Dog
@@ -80,8 +85,8 @@ class Dog extends Animal {
  ---------------------------------------------------
  | Type        | Direction        | Example        | Performed By | Safe?  |
  |--------------|------------------|----------------|---------------|---------|
- | Upcasting    | Child → Parent   | Dog → Animal   | Automatic     | ✅ Yes  |
- | Downcasting  | Parent → Child   | Animal → Dog   | Manual        | ⚠️ Risky |
+ | Upcasting    | Child -> Parent  | Dog -> Animal  | Automatic     | ✅ Yes  |
+ | Downcasting  | Parent -> Child  | Animal -> Dog  | Manual        | ⚠️ Risky |
 
  ---------------------------------------------------
  💡 INTERVIEW NOTES
@@ -97,5 +102,8 @@ class Dog extends Animal {
  ---------------------------------------------------
  Animal sound
  Dog barks
+ Animal sound
+
+ (If invalid downcasting block is uncommented:)
  Caught Exception: java.lang.ClassCastException: Animal cannot be cast to Dog
  */
