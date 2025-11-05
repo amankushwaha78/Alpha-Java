@@ -103,7 +103,7 @@
  *       class Drone implements Flyable, Recordable { }
  *
  * ------------------------------------------------------------
- * 1️⃣4️⃣ **Main Method**
+ * 1️⃣4️⃣ **Primitive Method**
  * - Abstract class → can have main method ✅
  *       abstract class Demo { public static void main(...) { } }
  * - Interface → since Java 8, can have static main ✅ (rarely used)
