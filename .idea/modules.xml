@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Alpha-Java.iml" filepath="$PROJECT_DIR$/.idea/Alpha-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/Primitive.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/Primitive.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_1. Data Types/_1. Data Types.iml" filepath="$PROJECT_DIR$/_100. Basics/_1. Data Types/_1. Data Types.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_1. Encapsulation/_1. Encapsulation.iml" filepath="$PROJECT_DIR$/_101. OOPS/_1. Encapsulation/_1. Encapsulation.iml" />
