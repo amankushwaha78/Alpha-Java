@@ -98,3 +98,43 @@ public class QA5_Caching {
         System.out.println("\n🎯 QA5 complete — caching & comparison rules nailed!");
     }
 }
+
+
+// =====================================================
+// 🧩 7️⃣ equals() vs '==' — VERY IMPORTANT INTERVIEW NOTE
+// =====================================================
+        /*
+           ⚖️ Difference between '==' and equals() in Java
+
+           🔹 '==' → Reference comparison (memory address)
+               - Checks whether both references point to the *same object*.
+               - Works for both primitives and objects, but behaves differently:
+
+                 ➤ For primitives → compares actual value.
+                      int a = 5, b = 5;
+                      System.out.println(a == b); // true ✅
+
+                 ➤ For objects (like Integer, String, etc.) → compares references.
+                      Integer x = 128, y = 128;
+                      System.out.println(x == y); // false ❌ (different objects) || outside cache
+                      System.out.println(x.equals(y)); // true ✅ (same numeric value)
+
+           🔹 equals() → Value comparison (content)
+               - Defined in Object class and overridden in wrappers, Strings, etc.
+               - Compares internal *data* rather than memory reference.
+
+           💡 Wrapper Caching makes '==' tricky:
+              Integer/Long/Short cache values from [-128, 127].
+              So within that range:
+                 Integer a = 127, b = 127;
+                 System.out.println(a == b);     // true ✅ (same cached reference)
+              But outside range:
+                 Integer c = 128, d = 128;
+                 System.out.println(c == d);     // false ❌ (new objects)
+              Use equals() ALWAYS for numeric comparison of wrappers.
+
+           💬 Interview talk-track:
+              "In Java, '==' checks if two references point to the same object,
+               while equals() checks if two objects have the same content.
+               For primitives, '==' compares values directly; for objects, use equals()."
+        */
