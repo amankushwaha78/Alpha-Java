@@ -1,7 +1,6 @@
 // File: ShortAndWrapperNotes.java
 // Topic: short (primitive) + Short (wrapper class) + inbuilt methods + comparison pitfalls
-// 🧠 Short = 2 bytes (range: -32,768 to 32,767)
-// 💡 Used for smaller integer storage when memory optimization is needed (IoT, embedded data, arrays of numbers)
+// 🧠 Short = 2 bytes (range: -32,768 to 32,767) — use when you need compact integers (memory-friendly arrays, IoT data, etc.)
 
 public class _3_ShortAndWrapperNotes {
     public static void main(String[] args) {
@@ -9,156 +8,139 @@ public class _3_ShortAndWrapperNotes {
         // --------------------------------------
         // 🧩 1️⃣ short — Primitive Type
         // --------------------------------------
-        // 👉 16-bit signed integer (2 bytes)
-        // 👉 Default range: -32768 to +32767
-        // 👉 Common use: when storing lots of small numeric values (saves memory)
-        short a = 100;      // ✅ 100 fits in short range
-        short b = 50;       // ✅ another short number
+        // 👉 16-bit signed integer (fast, value stored directly; not an object)
+        short a = 100;   // OK: inside range
+        short b = 50;    // OK: inside range
 
-        // 🔹 Basic Arithmetic (internally promoted to int during operations)
-        System.out.println("Sum: " + (a + b));   // -> 150
+        // 🧠 Basic arithmetic (Java promotes to int during ops, result prints fine)
+        System.out.println("Sum: "  + (a + b));  // -> 150
         System.out.println("Diff: " + (a - b));  // -> 50
         System.out.println("Prod: " + (a * b));  // -> 5000
-        System.out.println("Div: " + (a / b));   // -> 2
-        // 💡 Even though operands are short, arithmetic happens in int internally in Java.
+        System.out.println("Div: "  + (a / b));  // -> 2
+        // 💡 Integer division: fractions are discarded.
 
         // --------------------------------------
         // 🧩 2️⃣ Short — Wrapper Class
         // --------------------------------------
-        // 👉 The wrapper allows `short` to behave like an object.
-        // 👉 Useful when working with Collections (e.g., List<Short>) or APIs requiring Objects.
+        // 👉 Object form of short; needed for Collections/APIs that require Objects.
+        Short box = Short.valueOf(a);     // Boxing:  short  → Short
+        short unbox = box.shortValue();   // Unboxing: Short → short
 
-        Short box = Short.valueOf(a);    // Boxing: primitive → object
-        short unbox = box.shortValue();  // Unboxing: object → primitive
+        System.out.println("Boxed: "   + box);   // -> 100   (now it’s an object)
+        System.out.println("Unboxed: " + unbox); // -> 100   (back to primitive)
 
-        System.out.println("Boxed: " + box);     // -> 100
-        System.out.println("Unboxed: " + unbox); // -> 100
-
-        // 🧠 Auto-boxing & Auto-unboxing
-        // Java compiler automatically converts between short ↔ Short
-        Short autoBox = 25;       // short → Short automatically
-        short autoUnbox = autoBox; // Short → short automatically
-        System.out.println("AutoBox: " + autoBox);     // -> 25
+        // 🧠 Auto-boxing / auto-unboxing (compiler does the conversion for you)
+        Short autoBox = 25;           // short → Short automatically
+        short autoUnbox = autoBox;    // Short → short automatically
+        System.out.println("AutoBox: "   + autoBox);   // -> 25
         System.out.println("AutoUnbox: " + autoUnbox); // -> 25
 
         // --------------------------------------
-        // 🧩 3️⃣ Inbuilt Methods in Short class (Daily Use + LeetCode Ready)
+        // 🧩 3️⃣ Inbuilt Methods in Short class (daily LeetCode use)
         // --------------------------------------
-        // 🧠 These methods help with conversions, comparisons, and byte operations.
+        // 🧠 Helpful for parsing, base conversions, comparison, byte order, and constants.
 
         // 🔹 1️⃣ Short.parseShort(String s)
-        // ✅ Converts a String → primitive short
-        // 🧠 Use case: read numeric input from text
+        // ✅ String → primitive short
+        // 🧠 Use: reading numeric tokens from input
         System.out.println(Short.parseShort("123")); // -> 123
 
-        // 🔹 2️⃣ Short.toString(short value)
-        // ✅ Converts short → String
-        // 🧠 Use case: concatenating or printing numbers as text
-        System.out.println(Short.toString((short) 45)); // -> "45"
+        // 🔹 2️⃣ Short.toString(short v)
+        // ✅ short → String
+        // 🧠 Use: building outputs, logs, or “string-based” checks
+        System.out.println(Short.toString((short)45)); // -> "45"
 
         // 🔹 3️⃣ Short.valueOf(String s)
-        // ✅ Converts a string → Short object (wrapper)
-        // 🧠 Use case: when Collections need an object type, not primitive
-        System.out.println(Short.valueOf("120")); // -> 120 (Short object)
+        // ✅ String → Short (OBJECT, not primitive)
+        // 🧠 Use: when APIs/Collections (List<Short>) need an object
+        System.out.println(Short.valueOf("120")); // -> 120 (Short)
 
         // 🔹 4️⃣ Short.valueOf(String s, int radix)
-        // ✅ Converts numbers from any base (binary, octal, decimal, hex) → Short object
-        // 🧠 Use case: base conversions — very common in parsing problems
+        // ✅ Base-N string → Short (object)
+        // 🧠 Use: binary/octal/hex inputs to decimal form
         System.out.println(Short.valueOf("101", 2));  // -> 5
-        // "101" (base 2) = 1×2² + 0×2¹ + 1×2⁰ = 4 + 0 + 1 = 5 ✅ (Binary → Decimal)
+        // "101"₂ = 1×2² + 0×2¹ + 1×2⁰ = 4 + 0 + 1 = 5 ✅
 
         System.out.println(Short.valueOf("10", 8));   // -> 8
-        // "10" (base 8) = 1×8¹ + 0×8⁰ = 8 ✅  (Octal → Decimal)
+        // "10"₈ = 1×8¹ + 0×8⁰ = 8 ✅
 
         System.out.println(Short.valueOf("10", 10));  // -> 10
-        // "10" (base 10) = 10 ✅  (Decimal → Decimal)
+        // "10"₁₀ = 10 ✅
 
         System.out.println(Short.valueOf("A", 16));   // -> 10
-        // "A" (base 16) = 10 ✅  (Hexadecimal → Decimal)
-        // 💡 Hexadecimal digits: 0–9, A=10, B=11, C=12, D=13, E=14, F=15
+        // "A"₁₆ = 10 (Hex digits: 0–9, A=10..F=15) ✅
 
         // 🔹 5️⃣ Short.decode(String s)
-        // ✅ Converts strings with prefixes (0x, 0, #) into Short values
-        // 🧠 Use case: reading config values (like color codes or constants)
-        System.out.println(Short.decode("123"));   // -> 123 (decimal)
-        System.out.println(Short.decode("0x7B"));  // -> 123 (hex)
-        System.out.println(Short.decode("#7B"));   // -> 123 (hex)
-        System.out.println(Short.decode("0173"));  // -> 123 (octal)
-        // 💡 decode() automatically detects the number system based on prefix.
+        // ✅ Auto-detects base by prefix → Short (object)
+        // 🧠 Use: config strings / literals that may come with prefixes
+        System.out.println(Short.decode("123"));   // -> 123   (decimal)
+        System.out.println(Short.decode("0x7B"));  // -> 123   (hex “0x”)
+        System.out.println(Short.decode("#7B"));   // -> 123   (hex “#”)
+        System.out.println(Short.decode("0173"));  // -> 123   (octal leading 0)
+        // 💡 Rule: “0x/0X/#” → hex, leading “0” → octal, else decimal.
 
         // 🔹 6️⃣ Short.compare(short x, short y)
-        // ✅ Returns:
-        //    → -1 if x < y
-        //    →  0 if x == y
-        //    →  1 if x > y
-        System.out.println(Short.compare((short) 10, (short) 20)); // -> -1
-        System.out.println(Short.compare((short) 20, (short) 10)); // -> 1
-        System.out.println(Short.compare((short) 5, (short) 5));   // -> 0
+        // ✅ Returns -1 / 0 / 1  (x<y / x==y / x>y)
+        // 🧠 Use: safe comparisons for sorting, avoids (x - y) overflow tricks
+        System.out.println(Short.compare((short)10, (short)20)); // -> -1
+        System.out.println(Short.compare((short)20, (short)10)); // -> 1
+        System.out.println(Short.compare((short)5,  (short)5));  // -> 0
 
-        // 🔹 7️⃣ Short.reverseBytes(short value)
-        // ✅ Swaps high and low bytes of the 16-bit number
-        // 🧠 Use case: Endianness correction (network byte order)
-        System.out.println(Short.reverseBytes((short) 0x1234)); // -> 13330 (0x3412)
-        /*
-        💡 EXPLANATION:
-        0x1234 (hex) = binary 0001 0010 0011 0100
-        reverseBytes → 0011 0100 0001 0010 = 0x3412 = 13330 decimal
-        Used when transferring binary data between systems with different architectures.
-        */
 
-        // 🔹 8️⃣ Short.hashCode(short value)
-        // ✅ Returns hash code (same as short value)
-        // 🧠 Used internally in HashMap/HashSet
-        System.out.println(Short.hashCode((short) 99)); // -> 99
-
-        // 🔹 9️⃣ Constants
-        // ✅ Provide key info for memory size and limits
-        System.out.println("MAX: " + Short.MAX_VALUE + ", MIN: " + Short.MIN_VALUE);
+        // 🔹 9️⃣ Constants: MAX/MIN, BYTES/SIZE
+        // ✅ Range + size info (great for guards / bit math)
+        System.out.println("MAX: "   + Short.MAX_VALUE + ", MIN: " + Short.MIN_VALUE);
         // -> MAX: 32767, MIN: -32768
+
         System.out.println("Bytes: " + Short.BYTES + ", Bits: " + Short.SIZE);
         // -> Bytes: 2, Bits: 16
 
-        // --------------------------------------
-        // 🧩 4️⃣ Comparison Pitfall (Caching)
-        // --------------------------------------
-        // 👉 Short caches values from -128 to 127
-        // 👉 '==' checks memory reference, not value equality.
-        // 👉 'equals()' compares actual numeric value.
-        Short x = 100;  // within cache range
-        Short y = 100;  // same cached object
-        Short p = 200;  // outside cache
-        Short q = 200;  // different object
-
-        System.out.println(x == y);      // -> true   (same cached reference)
-        System.out.println(p == q);      // -> false  (different objects)
-        System.out.println(x.equals(y)); // -> true   (values equal)
-        System.out.println(p.equals(q)); // -> true   (values equal)
-        // 💡 Interview Tip: Always use .equals() for wrappers (Integer, Short, Long).
+        // 🔹 8️⃣ Leading zeros (Short has no numberOfLeadingZeros)
+        // 🔹 9️⃣ Trailing zeros (Short has no numberOfTrailingZeros)
+        // 🔹 7️⃣ Bit count (Short has no bitCount)
+        // 🔹 6️⃣ Binary string (Short has no toBinaryString)
+        // 🔹 4️⃣ Max/Min (Short has no Short.max/min)
 
         // --------------------------------------
-        // 🧩 5️⃣ Safe Comparison Example
+        // 🧩 4️⃣ Comparison Pitfall
+        // --------------------------------------
+        // 👉 '==' on wrappers compares OBJECT REFERENCES (memory), not numeric value.
+        // 👉 'equals()' compares numeric value.
+        // 👉 Short cache range (like Integer/Long): [-128, 127] for autoboxed/valueOf() instances.
+        Short p = 127;  // cached
+        Short q = 127;  // same cached object
+        Short r = 128;  // new object (not cached)
+        Short s = 128;  // another new object
+
+        System.out.println(p == q);       // -> true   (same cached reference)
+        System.out.println(r == s);       // -> false  (different objects)
+        System.out.println(p.equals(q));  // -> true   (same numeric value)
+        System.out.println(r.equals(s));  // -> true   (same numeric value)
+        // 💡 Interview Tip: Always use equals() for comparing wrapper objects.
+
+        // --------------------------------------
+        // 🧩 5️⃣ Safe Comparison (Recommended)
         // --------------------------------------
         Short s1 = 127, s2 = 127;
         if (s1.equals(s2)) {
-            System.out.println("Equal ✔️");
+            System.out.println("Both are equal ✔️");
         } else {
-            System.out.println("Not Equal ❌");
+            System.out.println("Not equal ❌");
         }
 
         // --------------------------------------
-        // 🧠 Summary (Quick Revision)
-        // --------------------------------------
-        // ✅ short = primitive (fast, 2 bytes)
-        // ✅ Short = wrapper (object type, has helper methods)
-        // ✅ Auto-boxing/unboxing = easy conversion between short ↔ Short
+        // 🧠 Summary (quick revision):
+        // short  = primitive (fast, 2 bytes)
+        // Short  = wrapper (object; works with Collections/APIs)
+        // Daily methods you’ll actually use:
+        //   parseShort, toString, valueOf(s), valueOf(s,radix), decode,
+        //   compare, reverseBytes, hashCode, MAX_VALUE/MIN_VALUE, BYTES/SIZE.
+        // Pitfall: use equals() (not ==) with wrappers because of caching [-128..127].
         //
-        // 🔹 Commonly used methods:
-        //   parseShort(), toString(), valueOf(String), valueOf(String, radix),
-        //   decode(), compare(), reverseBytes(), hashCode(),
-        //   MAX_VALUE, MIN_VALUE, BYTES, SIZE.
-        //
-        // ⚠️ Pitfall:
-        //   - Always use equals() for wrapper comparisons.
-        //   - Caching applies only in range [-128, 127].
+        // 🔧 Need bit helpers (bitCount/leadingZeros/trailingZeros) for short?
+        //   → Short doesn’t have them; use int view:
+        //      int ui16 = s & 0xFFFF;
+        //      Integer.bitCount(ui16), Integer.numberOfLeadingZeros(ui16)-16,
+        //      Integer.numberOfTrailingZeros(ui16), Integer.highestOneBit(ui16).
     }
 }
