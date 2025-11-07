@@ -146,16 +146,6 @@ public class _3_Garbage_Collection {
  *
  * ✅ Instead, use `try-with-resources` or explicit `close()` methods.
  *
- * ============================================================
- * 🔹 6️⃣ GC LOGS & MONITORING
- * ============================================================
- * Add these JVM flags to observe GC activity:
- *     ➤ -verbose:gc
- *     ➤ -XX:+PrintGCDetails
- *     ➤ -XX:+PrintGCDateStamps
- *
- * Example output:
- *     [GC (Allocation Failure) 512K->128K(1024K), 0.0023 secs]
  *
  * ============================================================
  * 🔹 7️⃣ COMMON INTERVIEW QUESTIONS
