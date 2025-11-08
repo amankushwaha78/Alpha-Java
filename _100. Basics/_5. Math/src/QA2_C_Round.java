@@ -1,4 +1,4 @@
-public class QA2_Round {
+public class QA2_C_Round {
     public static void main(String[] args) {
         /* ============================================================
          * 🧮 1️⃣ Math.round() — midpoint rounding (away from zero)

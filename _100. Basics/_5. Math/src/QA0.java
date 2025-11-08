@@ -2,7 +2,7 @@
 // Topic: Output-Based Java Questions — Math Class Functions
 // 🧩 Covers 17 tricky and most commonly asked Math output scenarios.
 
-public class QA1 {
+public class QA0 {
     public static void main(String[] args) {
 
         /* ============================================================

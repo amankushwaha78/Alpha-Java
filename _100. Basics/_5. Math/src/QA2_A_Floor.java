@@ -2,7 +2,7 @@
 // Topic: Math.floor() — rounds DOWN to the nearest integer
 // 🧠 floor(x) always gives the largest integer less than or equal to x.
 
-public class QA2_Floor {
+public class QA2_A_Floor {
         public static void main(String[] args) {
 
                 /* ============================================================

@@ -2,7 +2,7 @@
 // Topic: Math.ceil() — rounds UP to the nearest integer
 // 🧠 ceil(x) always gives the smallest integer greater than or equal to x.
 
-public class QA2_Ceil {
+public class QA2_B_Ceil {
     public static void main(String[] args) {
 
         /* ============================================================
