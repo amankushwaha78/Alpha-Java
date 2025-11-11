@@ -139,12 +139,13 @@ public class _4_ByteAndWrapperNotes {
         //   (byte)130 == -126 (wraps around mod 256)
         //
         // ⚠️ Missing methods (unlike Integer/Long):
-        // 🔹 8️⃣ Leading zeros (Short has no numberOfLeadingZeros)
-        // 🔹 9️⃣ Trailing zeros (Short has no numberOfTrailingZeros)
-        // 🔹 7️⃣ Bit count (Short has no bitCount)
-        // 🔹 6️⃣ Binary string (Short has no toBinaryString)
-        // 🔹 4️⃣ Max/Min (Short has no Short.max/min)
-        //
+        // 🔹 Leading zeros:       Byte has no numberOfLeadingZeros()
+        // 🔹 Trailing zeros:      Byte has no numberOfTrailingZeros()
+        // 🔹 Bit count:           Byte has no bitCount()
+        // 🔹 Binary string:       Byte has no toBinaryString()
+        // 🔹 Max/Min:             Byte has no Byte.max/min()
+        // 🔹 Sum:                 Byte has no Byte.sum()
+
         // 💬 Always use equals() for comparing Byte objects (== only works reliably in cache range).
     }
 }

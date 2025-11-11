@@ -129,18 +129,16 @@ public class _3_ShortAndWrapperNotes {
         }
 
         // --------------------------------------
-        // 🧠 Summary (quick revision):
-        // short  = primitive (fast, 2 bytes)
-        // Short  = wrapper (object; works with Collections/APIs)
-        // Daily methods you’ll actually use:
-        //   parseShort, toString, valueOf(s), valueOf(s,radix), decode,
-        //   compare, reverseBytes, hashCode, MAX_VALUE/MIN_VALUE, BYTES/SIZE.
-        // Pitfall: use equals() (not ==) with wrappers because of caching [-128..127].
         //
-        // 🔧 Need bit helpers (bitCount/leadingZeros/trailingZeros) for short?
-        //   → Short doesn’t have them; use int view:
-        //      int ui16 = s & 0xFFFF;
-        //      Integer.toBinaryString(), Integer.bitCount(ui16), Integer.numberOfLeadingZeros(ui16)-16,
-        //      Integer.numberOfTrailingZeros(ui16), Integer.highestOneBit(ui16).
+        // ⚠️ Overflow:
+        //   (byte)130 == -126 (wraps around mod 256)
+        //
+        // ⚠️ Missing methods (unlike Integer/Long):
+        // 🔹 8️⃣ Leading zeros (Short has no numberOfLeadingZeros)
+        // 🔹 9️⃣ Trailing zeros (Short has no numberOfTrailingZeros)
+        // 🔹 7️⃣ Bit count (Short has no bitCount)
+        // 🔹 6️⃣ Binary string (Short has no toBinaryString)
+        // 🔹 4️⃣ Max/Min (Short has no Short.max/min)
+        //
     }
 }
