@@ -84,17 +84,17 @@ public class QA3_Decimal {
         /* ============================================================
          * 🧠 Summary:
          * ------------------------------------------------------------
-         * | Format | Meaning                          | Example Output  |
-         * |---------|----------------------------------|-----------------|
-         * | %.2f    | 2 decimal places                 | 12.35           |
-         * | %8.2f   | width 8, right aligned           | "   12.35"      |
-         * | %-8.2f  | width 8, left aligned            | "12.35   "      |
-         * | %+8.2f  | always show + or - sign          | "+12.35"        |
-         * | %010.2f | pad with zeros to width 10       | "000012.35"     |
-         * | %e      | scientific notation              | 1.234567e+01    |
-         * | %,.2f   | comma grouping                   | 12,345.68       |
+         * | Format   | Meaning                           | Example Output    |
+         * |----------|-----------------------------------|-------------------|
+         * | %.2f     | 2 decimal places                  | 12.35             |
+         * | %8.2f    | width 8, right aligned            | "   12.35"        |
+         * | %-8.2f   | width 8, left aligned             | "12.35   "        |
+         * | %+8.2f   | width 8, always show + / - sign   | "  +12.35"        |
+         * | %010.2f  | pad with zeros to width 10        | "000012.35"       |
+         * | %e       | scientific notation               | 1.234567e+01      |
+         * | %,.2f    | comma grouping                    | 12,345.68         |
          * ------------------------------------------------------------
-         *
+
          * 💬 Interview Quick Facts:
          * ✅ %.nf → rounds to n decimals (not truncates)
          * ✅ Default rounding = HALF_UP (0.5 → up)
