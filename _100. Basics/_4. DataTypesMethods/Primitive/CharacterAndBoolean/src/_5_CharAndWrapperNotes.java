@@ -25,7 +25,7 @@ public class _5_CharAndWrapperNotes {
         // 🧩 2️⃣ char as Number (ASCII / Unicode)
         // =====================================================
         // 👉 Each char has a numeric value — its Unicode/ASCII code.
-        int codeA = letter;                  // implicit widening to int
+        int codeA = letter;  // int codeA = 'A';        // implicit widening to int
         System.out.println("ASCII of 'A': " + codeA);   // -> 65
 
         char next = (char) (letter + 1);     // char promotes to int → result cast back
