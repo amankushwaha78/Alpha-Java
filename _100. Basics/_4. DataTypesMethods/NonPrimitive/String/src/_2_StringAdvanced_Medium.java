@@ -83,30 +83,6 @@ public class _2_StringAdvanced_Medium {
 
 
         // =====================================================
-        // 🧩 4️⃣ Compile-time vs Runtime Concatenation
-        // =====================================================
-        /*
-           ✅ Compile-time (SCP):
-              "Ja" + "va"  → compiler makes "Java" directly in SCP.
-
-           ✅ Runtime (Heap):
-              String a = "Ja";
-              a + "va" → happens at runtime → new heap object.
-
-           💡 So "same text" doesn't mean "same reference".
-        */
-
-        String c1 = "Java";
-        String c2 = "Ja" + "va";       // compile-time
-        String part = "Ja";
-        String c3 = part + "va";       // runtime
-
-        System.out.println(c1 == c2);          // true
-        System.out.println(c1 == c3);          // false
-        System.out.println(c1.equals(c3));     // true
-
-
-        // =====================================================
         // 🧩 5️⃣ compareTo() (Lexicographic Compare)
         // =====================================================
         /*

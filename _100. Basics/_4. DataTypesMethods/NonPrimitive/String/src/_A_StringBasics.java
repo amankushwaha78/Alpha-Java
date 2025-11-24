@@ -2,7 +2,7 @@
 // Topic: Basic & essential String concepts for beginners
 // 🧠 Simple, clean, easy-to-remember notes for fast revision
 
-public class _1_StringBasics {
+public class _A_StringBasics {
     public static void main(String[] args) {
 
         // =====================================================
