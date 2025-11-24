@@ -2,7 +2,7 @@
 // Topic: String (non-primitive) + memory (SCP/Heap) + immutability + inbuilt methods + intern() + tricky interview cases
 // 🧠 String is the MOST asked non-primitive topic in Java interviews.
 
-public class _1_StringAndWrapperNotes {
+public class _0_StringAndWrapperNotes {
     public static void main(String[] args) {
 
         // =====================================================

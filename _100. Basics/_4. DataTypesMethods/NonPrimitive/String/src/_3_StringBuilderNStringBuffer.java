@@ -4,7 +4,7 @@
 //            compareTo, equalsIgnoreCase, split/replace/trim, valueOf,
 //            compile-time vs runtime concatenation.
 
-public class _C_StringBuilderNStringBuffer {
+public class _3_StringBuilderNStringBuffer {
     public static void main(String[] args) {
 
         // =====================================================

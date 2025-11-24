@@ -2,7 +2,7 @@
 // Topic: String Pool + Concatenation Rules + intern() + final optimization
 // 🧠 All "reference / SCP based" interview logic lives here.
 
-public class _B_StringAdvanced_Core {
+public class _2_StringAdvanced_Core {
     public static void main(String[] args) {
         // =====================================================
         // 🧩 1️⃣ SCP (String Constant Pool) Deep Rules
