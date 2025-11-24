@@ -105,9 +105,9 @@ public class _B_StringPool_Concat_Intern {
         */
 
         String t1 = "Java";
-        String t2 = "Ja" + "va";     // compile-time
+        String t2 = "Ja" + "va";     // compile-time (SCP)
         String t3 = "Ja";
-        String t4 = t3 + "va";       // runtime
+        String t4 = t3 + "va";       // runtime ( HEAP )
 
         System.out.println(t1 == t2);          // true
         System.out.println(t1 == t4);          // false
