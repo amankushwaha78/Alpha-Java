@@ -9,40 +9,110 @@ public class _3_StringAdvanced_Full {
     public static void main(String[] args) {
 
         // =====================================================
-        // 🧩 1️⃣ SCP (String Constant Pool) Deep Rules
+        // 🧩 5️⃣ compareTo() (Lexicographic Compare)
         // =====================================================
         /*
-           ✅ SCP stores ONLY literals + interned strings.
-           ✅ If literal already exists → SAME reference reused.
-           ✅ Heap strings are NOT in SCP unless intern() called.
+           compareTo():
+              returns 0  → equal
+              returns <0 → this string smaller
+              returns >0 → this string bigger
+           ✅ Comparison is based on Unicode values character by character.
         */
 
-        String a1 = "Hello";          // SCP
-        String a2 = "Hello";          // same SCP
-        System.out.println(a1 == a2); // true
-
-        String a3 = new String("Hello");        // heap
-        System.out.println(a1 == a3);          // false
-        System.out.println(a1 == a3.intern()); // true (heap moved/linked to SCP)
+        System.out.println("abc".compareTo("abc"));  // 0
+        System.out.println("abc".compareTo("abd"));  // -1  (c < d)
+        System.out.println("abd".compareTo("abc"));  // 1   (d > c)
 
 
         // =====================================================
-        // 🧩 2️⃣ Compile-time Optimization with final variables
+        // 🧩 6️⃣ equalsIgnoreCase()
         // =====================================================
         /*
-           ✅ If variables are final and known at compile-time,
-              concatenation may become compile-time and go to SCP.
-
-           Example:
-              final String x = "Ja";
-              String y = x + "va";   → compiler makes "Java" in SCP
+           equalsIgnoreCase() compares content ignoring case.
         */
 
-        final String fx = "Ja";
-        String fy = fx + "va";           // compile-time because fx is final
-        String fz = "Java";
-        System.out.println(fy == fz);    // true
+        System.out.println("Java".equalsIgnoreCase("java")); // true
+        System.out.println("Java".equals("java"));           // false
 
+
+        // =====================================================
+        // 🧩 7️⃣ split() and replace()
+        // =====================================================
+        /*
+           split(regex):
+              breaks string by delimiter into array.
+
+           replace(old, new):
+              replaces all occurrences (no regex)
+
+           replaceAll(regex, new):
+              regex-based replacement
+        */
+
+        String line = "a,b,c";
+        String[] arr = line.split(",");
+        System.out.println(arr.length);     // 3
+        System.out.println(arr[0]);         // a
+        System.out.println(arr[1]);         // b
+        System.out.println(arr[2]);         // c
+
+        String r1 = "ha ha ha".replace("ha", "ho");
+        System.out.println(r1);            // ho ho ho
+
+        String r2 = "A1B2C3".replaceAll("\\d", "_");
+        System.out.println(r2);            // A_B_C_
+
+
+        // =====================================================
+        // 🧩 8️⃣ trim(), isEmpty(), isBlank()
+        // =====================================================
+        /*
+           trim() → removes leading/trailing spaces only.
+
+           isEmpty() → true if length == 0
+           isBlank() (Java 11+) → true if only whitespace
+        */
+
+        String sp = "   Aman   ";
+        System.out.println(sp.trim());          // "Aman"
+
+        System.out.println("".isEmpty());       // true
+        System.out.println("   ".isEmpty());    // false
+        System.out.println("   ".isBlank());    // true
+
+
+        // =====================================================
+        // 🧩 9️⃣ valueOf() (Convert primitives to String)
+        // =====================================================
+        /*
+           String.valueOf(x) converts any primitive to String.
+           ✅ safe alternative to + "".
+        */
+
+        int num = 10;
+        boolean flag = true;
+        float f = 2.5f;
+
+        System.out.println(String.valueOf(num));   // "10"
+        System.out.println(String.valueOf(flag));  // "true"
+        System.out.println(String.valueOf(f));     // "2.5"
+
+
+        // =====================================================
+        // 🧠 QUICK MEDIUM-LEVEL REVISION
+        // =====================================================
+        /*
+           🔹 String = immutable, literals in SCP.
+           🔹 StringBuilder = mutable, fast, single-thread use.
+           🔹 StringBuffer  = mutable, thread-safe, slower.
+           🔹 capacity() default 16 (+length if initialized with text).
+           🔹 append/insert/delete/reverse are key builder ops.
+           🔹 "A"+"B" compile-time → SCP; var+"B" runtime → heap.
+           🔹 compareTo() lexicographic, equalsIgnoreCase() ignores case.
+           🔹 split() uses regex delimiter; replaceAll() is regex-based.
+           🔹 trim() removes outer spaces; isBlank() checks whitespace-only.
+           🔹 String.valueOf() converts primitives to String safely.
+        */
 
         // =====================================================
         // 🧩 3️⃣ hashCode() Caching Concept
