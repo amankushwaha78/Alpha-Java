@@ -3,39 +3,39 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Alpha-Java.iml" filepath="$PROJECT_DIR$/.idea/Alpha-Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/Array/Array.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/Array/Array.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/NonPrimitive.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/NonPrimitive.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/Primitive.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/Primitive/Primitive.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/String/String.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/NonPrimitive/String/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/Array/Array.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/Primitive/CharacterAndBoolean/CharacterAndBoolean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/Primitive/FloatType/FloatType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/Primitive/IntegerType/IntegerType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/NonPrimitive.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/NonPrimitive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/Primitive/Primitive.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/Primitive/Primitive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/String/String.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/NonPrimitive/String/String.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_0. JDK/_0. JDK.iml" filepath="$PROJECT_DIR$/_100. Basics/_0. JDK/_0. JDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_0. Java Advantages Disadvanatges/_0. Java Advantages Disadvanatges.iml" filepath="$PROJECT_DIR$/_100. Basics/_0. Java Advantages Disadvanatges/_0. Java Advantages Disadvanatges.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_1. Data Types/_1. Data Types.iml" filepath="$PROJECT_DIR$/_100. Basics/_1. Data Types/_1. Data Types.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_1. Encapsulation/_1. Encapsulation.iml" filepath="$PROJECT_DIR$/_101. OOPS/_1. Encapsulation/_1. Encapsulation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_1. Generic/_1. Generic.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_1. Generic/_1. Generic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_1. Generic/_1. Generic.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_1. Generic/_1. Generic.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_100. Basics.iml" filepath="$PROJECT_DIR$/_100. Basics/_100. Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_101. Collection N Generic Basics.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_101. Collection N Generic Basics.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_101. OOPS.iml" filepath="$PROJECT_DIR$/_101. OOPS/_101. OOPS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_102. Collection N Generic.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_102. Collection N Generic.iml" />
       <module fileurl="file://$PROJECT_DIR$/_103. Concurrency N Multithreading/_103. Concurrency N Multithreading.iml" filepath="$PROJECT_DIR$/_103. Concurrency N Multithreading/_103. Concurrency N Multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/_104. JVM N Memory N Performance/_104. JVM N Memory N Performance.iml" filepath="$PROJECT_DIR$/_104. JVM N Memory N Performance/_104. JVM N Memory N Performance.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_2. List vs Set vs Map/_2. List vs Set vs Map.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_2. List vs Set vs Map/_2. List vs Set vs Map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_2. List vs Set vs Map/_2. List vs Set vs Map.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_2. List vs Set vs Map/_2. List vs Set vs Map.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_2. TypeCastingDemo/_2. TypeCastingDemo.iml" filepath="$PROJECT_DIR$/_100. Basics/_2. TypeCastingDemo/_2. TypeCastingDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_2.A. Abstraction/_2.A. Abstraction.iml" filepath="$PROJECT_DIR$/_101. OOPS/_2.A. Abstraction/_2.A. Abstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_2.B. Abstraction - Interfaces/_2.B. Abstraction - Interfaces.iml" filepath="$PROJECT_DIR$/_101. OOPS/_2.B. Abstraction - Interfaces/_2.B. Abstraction - Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_2.C. Abstraction IO/_2.C. Abstraction IO.iml" filepath="$PROJECT_DIR$/_101. OOPS/_2.C. Abstraction IO/_2.C. Abstraction IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_3. Control Flow/_3. Control Flow.iml" filepath="$PROJECT_DIR$/_100. Basics/_3. Control Flow/_3. Control Flow.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_3. HashSet vs LinkedHashSet vs TreeSet/_3. HashSet vs LinkedHashSet vs TreeSet.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_3. HashSet vs LinkedHashSet vs TreeSet/_3. HashSet vs LinkedHashSet vs TreeSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_3. HashSet vs LinkedHashSet vs TreeSet/_3. HashSet vs LinkedHashSet vs TreeSet.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_3. HashSet vs LinkedHashSet vs TreeSet/_3. HashSet vs LinkedHashSet vs TreeSet.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_3. Polymorphism/_3. Polymorphism.iml" filepath="$PROJECT_DIR$/_101. OOPS/_3. Polymorphism/_3. Polymorphism.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/_4. DataTypesMethods.iml" filepath="$PROJECT_DIR$/_100. Basics/_4. DataTypesMethods/_4. DataTypesMethods.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_4. HashMap vs LinkedHashMap vs TreeMap/_4. HashMap vs LinkedHashMap vs TreeMap.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_4. HashMap vs LinkedHashMap vs TreeMap/_4. HashMap vs LinkedHashMap vs TreeMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4. DataTypesMethods/_4. DataTypesMethods.iml" filepath="$PROJECT_DIR$/_4. DataTypesMethods/_4. DataTypesMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_4. HashMap vs LinkedHashMap vs TreeMap/_4. HashMap vs LinkedHashMap vs TreeMap.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_4. HashMap vs LinkedHashMap vs TreeMap/_4. HashMap vs LinkedHashMap vs TreeMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/_101. OOPS/_4. Inheritance/_4. Inheritance.iml" filepath="$PROJECT_DIR$/_101. OOPS/_4. Inheritance/_4. Inheritance.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_5. ArrayList vs LinkedList/_5. ArrayList vs LinkedList.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_5. ArrayList vs LinkedList/_5. ArrayList vs LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_5. ArrayList vs LinkedList/_5. ArrayList vs LinkedList.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_5. ArrayList vs LinkedList/_5. ArrayList vs LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_5. Math/_5. Math.iml" filepath="$PROJECT_DIR$/_100. Basics/_5. Math/_5. Math.iml" />
       <module fileurl="file://$PROJECT_DIR$/_100. Basics/_6. Operators/_6. Operators.iml" filepath="$PROJECT_DIR$/_100. Basics/_6. Operators/_6. Operators.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_6. Queue vs Deque vs PriorityQueue/_6. Queue vs Deque vs PriorityQueue.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_6. Queue vs Deque vs PriorityQueue/_6. Queue vs Deque vs PriorityQueue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_102. Collection N Generic/_7. Stack vs Queue/_7. Stack vs Queue.iml" filepath="$PROJECT_DIR$/_102. Collection N Generic/_7. Stack vs Queue/_7. Stack vs Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_6. Queue vs Deque vs PriorityQueue/_6. Queue vs Deque vs PriorityQueue.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_6. Queue vs Deque vs PriorityQueue/_6. Queue vs Deque vs PriorityQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_101. Collection N Generic Basics/_7. Stack vs Queue/_7. Stack vs Queue.iml" filepath="$PROJECT_DIR$/_101. Collection N Generic Basics/_7. Stack vs Queue/_7. Stack vs Queue.iml" />
     </modules>
   </component>
 </project>
