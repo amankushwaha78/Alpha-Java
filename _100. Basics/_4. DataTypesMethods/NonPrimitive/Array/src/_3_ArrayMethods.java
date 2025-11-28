@@ -77,10 +77,11 @@ public class _3_ArrayMethods {
         //     type[] part = Arrays.copyOfRange(array, from, to);
         //
         // Example:
-        int[] part = Arrays.copyOfRange(nums, 1, 3);
+        int[] rangeSource = {10, 20, 30, 40};
+        int[] part = Arrays.copyOfRange(rangeSource, 1, 3);
         System.out.println(Arrays.toString(part));
         // Output:
-        // [2, 4]
+        // [20, 30]
 
 
         // =====================================================
@@ -107,7 +108,8 @@ public class _3_ArrayMethods {
         //     int index = Arrays.binarySearch(array, key);
         //
         // Example:
-        int idx = Arrays.binarySearch(nums, 4); // nums is already sorted
+        int[] searchArr = {10, 30, 40, 99}; // already sorted
+        int idx = Arrays.binarySearch(searchArr, 40);
         System.out.println(idx);
         // Output:
         // 2
