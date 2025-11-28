@@ -9,10 +9,10 @@ public class _1_StringBasics {
         // 🧩 1️⃣ What is String?
         // =====================================================
         /*
-           ✔ String is a CLASS (non-primitive)
-           ✔ Stored in HEAP as an object (like any other class)
-           ✔ BUT string literals are stored separately in SCP ( String Constant Pool )
-           ✔ String is IMMUTABLE → once created, cannot be changed
+         *  ✔ String is a CLASS (java.lang.String)
+         *  ✔ Non-primitive, stored in HEAP
+         *  ✔ Literal Strings go to the special memory area → SCP
+         *  ✔ IMMUTABLE → once created, value cannot change
 
            📌 IMMUTABLE means:
               If we modify a String, a NEW object is created.
