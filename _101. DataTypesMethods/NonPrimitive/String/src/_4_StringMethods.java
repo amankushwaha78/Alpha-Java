@@ -29,7 +29,7 @@ public class _4_StringMethods {
         // Example:
         System.out.println(name.charAt(2));
         // Output:
-        // n
+        // a
 
 
         // ➤ (3) toCharArray()
