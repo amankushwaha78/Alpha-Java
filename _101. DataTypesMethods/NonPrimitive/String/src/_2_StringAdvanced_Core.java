@@ -25,12 +25,16 @@ public class _2_StringAdvanced_Core {
         System.out.println(a1 == a3);          // false
         System.out.println(a1 == a3.intern()); // true (heap moved/linked to SCP)
 
-
         // =====================================================
-        // 🧩 2️⃣ intern()
+        // 🧩 6️⃣ intern() — Beginner Overview
         // =====================================================
         /*
-           ✅ intern() returns SCP version of a heap string.
+           ✔ intern() moves string to SCP from HEAP if not present
+           ✔ returns the SCP reference
+
+           📌 Why useful?
+              To make two same strings share same reference.
+
            If SCP already has it → return same SCP ref.
            Else → add to SCP and return that.
 
