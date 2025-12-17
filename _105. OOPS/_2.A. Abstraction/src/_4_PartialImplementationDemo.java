@@ -38,6 +38,7 @@ abstract class RegularPolygonBase extends PolygonBase {
     }
 
     // ❌ Still abstract → must be defined by next subclass
+    // Commenting these will not cause any issue
     @Override
     abstract double area();
 }
