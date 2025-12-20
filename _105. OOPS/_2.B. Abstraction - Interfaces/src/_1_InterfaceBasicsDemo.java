@@ -10,6 +10,13 @@
  * - A class implements an interface to provide its own version of those methods.
  */
 
+/*
+ * File 1 — InterfaceBasicsDemo.java
+ *
+ * 💡 GOAL:
+ * Understand what an interface is and how a class implements it.
+ */
+
 // ✅ Step 1: Define an interface
 interface Animal {
     void makeSound();   // implicitly public & abstract
@@ -17,7 +24,7 @@ interface Animal {
 }
 
 // ✅ Step 2: Class implements the interface
-class Dog implements Animal2 {
+class Dog implements Animal {
     @Override
     public void makeSound() {
         System.out.println("Bark! 🐶");
@@ -30,7 +37,7 @@ class Dog implements Animal2 {
 }
 
 // ✅ Step 3: Another class implementing same interface
-class Cat implements Animal2 {
+class Cat implements Animal {
     @Override
     public void makeSound() {
         System.out.println("Meow! 🐱");
@@ -45,8 +52,10 @@ class Cat implements Animal2 {
 // ✅ Step 4: Main class to test
 public class _1_InterfaceBasicsDemo {
     public static void main(String[] args) {
-        Animal2 dog = new Dog2();
-        Animal2 cat = new Cat();
+
+        // Interface reference → Concrete object
+        Dog dog = new Dog();
+        Animal cat = new Cat();
 
         dog.makeSound();
         dog.eat();
@@ -57,6 +66,7 @@ public class _1_InterfaceBasicsDemo {
         cat.eat();
     }
 }
+
 
 /*
 🧠 What You Learned

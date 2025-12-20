@@ -2,58 +2,59 @@
  * File 3 — ConstructorsFieldsDemo.java
  *
  * 💡 GOAL:
- * Learn how constructors, instance/static/final fields, and initializer blocks
- * behave in an abstract class.
+ * Understand how constructors, fields, and initializer blocks
+ * behave inside an abstract class.
  *
  * ⚙️ RULES:
- * ✅ Abstract classes CAN have constructors.
- * ✅ They’re called when a subclass object is created.
- * ✅ You can have static, instance, and final fields.
- * ✅ Static blocks run only once (when class loads).
- * ✅ Instance blocks run before the constructor (rarely used).
+ * ✅ Abstract classes CAN have constructors
+ * ✅ Parent constructor is ALWAYS called first
+ * ✅ Static fields are shared across all objects
+ * ✅ Static blocks run ONCE (class loading)
+ * ✅ Instance blocks run BEFORE constructor
  */
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-// ✅ Step 1: Abstract base class
 abstract class ShapeBase {
-    // Instance field
+
+    // Instance field (object-level state)
     protected double scale = 1.0;
 
-    // Final field (must be initialized once)
+    // Final field (must be initialized exactly once)
     protected final String name;
 
-    // Static field (shared among all objects)
-    private static final AtomicInteger COUNT = new AtomicInteger(0);
+    // Static field (shared counter for all shapes)
+    private static int count = 0;
 
-    // Static initializer — runs once when class is first loaded
+    // Static initializer — runs once when class is loaded
     static {
-        System.out.println("[ShapeBase] Static block called 🧱 (Class loaded once)");
+        System.out.println("[ShapeBase] Static block executed 🧱");
     }
 
-    // Instance initializer — runs every time *before* constructor body
+    // Instance initializer — runs before constructor for every object
     {
-        System.out.println("[ShapeBase] Instance block called ⚙️");
+        System.out.println("[ShapeBase] Instance block executed ⚙️");
     }
 
-    // Constructor — called every time a new object is created
+    // Constructor — initializes final field and updates counter
     protected ShapeBase(String name) {
         this.name = name;
-        COUNT.incrementAndGet();
-        System.out.println("[ShapeBase] Constructor called 🏗️ for " + name);
+        count++;
+        System.out.println("[ShapeBase] Constructor executed 🏗️ for " + name);
     }
 
-    // Static method to get total objects created
+    // Static method — returns total objects created
     public static int getCreatedCount() {
-        return COUNT.get();
+        return count;
     }
 
-    // Abstract method (must be implemented by child)
+    // Abstract method — must be implemented by subclasses
     public abstract double area();
 }
 
-// ✅ Step 2: Concrete subclass
+// --------------------------------------------------
+// Concrete subclass
+// --------------------------------------------------
 class Circle extends ShapeBase {
+
     private final double radius;
 
     public Circle(double radius) {
@@ -67,9 +68,13 @@ class Circle extends ShapeBase {
     }
 }
 
-// ✅ Step 3: Main class to test
+// --------------------------------------------------
+// Main class
+// --------------------------------------------------
 public class _3_ConstructorsFieldsDemo {
+
     public static void main(String[] args) {
+
         System.out.println("=== Creating Circle Objects ===");
 
         Circle c1 = new Circle(2);
