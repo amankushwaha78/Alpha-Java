@@ -14,7 +14,7 @@ class Dog7 extends Animal7 {
 }
 
 // Child class 2
-class Cat extends Animal7 {
+class Cat7 extends Animal7 {
     void meow() {
         System.out.println("Cat meows");
     }
